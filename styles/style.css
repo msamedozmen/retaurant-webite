@@ -47,6 +47,22 @@ section{
     background-color: var(--black-color);
     cursor: pointer;
 }
+
+.sections-heads {
+    color: var(--black-color);
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-bottom: 3.5rem;
+    border-bottom: 0.2rem solid #fff
+
+
+}
+.sections-spans{
+    color: white;
+    text-transform: uppercase;
+
+}
+
 /*!Header start*/
 
 .logo img {
@@ -149,9 +165,161 @@ section{
 
 .menu .box-container .box .menu-category {
     font-size: 1.2rem;
+
 }
 
 .menu .box-container .box h3 {
     font-size: 3rem;
     padding: 1rem 0;
+}
+.menu .box-container .box  .box-head .price {
+    font-size: 2rem;
+}
+.menu .box-container .box  .box-head .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+/* .shaped-btn {
+    border-radius: 30rem;
+} */
+
+.products .box-container {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+}
+
+.products .box-container .box {
+    padding: 3rem;
+    background-color: white;
+    border-radius: 3rem;
+    min-height: 50rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.products .box-container img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.products .box-container .box h3{
+    font-size: 2.8rem;
+}
+
+.products .box-container .box span{
+    font-size: 1.4rem;
+}
+.products .box-container .box .box-bottom {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: 15px;
+  
+}
+.products .box-container .box .box-bottom .product-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+
+}
+
+.bc-img{
+    display: flex;
+    background: url(../images/dark-product.jpg);
+    background-position: center;
+    background-size: 85%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bc-img h3,
+.bc-img span,
+.bc-img p {
+    color: white;
+}
+.bc-img .product-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.box-bottom {
+    display: flex;
+    justify-content: space-between; /* Separates the left and right */
+    align-items: center;
+    width: 100%; /* Ensures it spans the entire width */
+    padding: 10px 0; /* Adds some space around the content */
+}
+
+.product-left,
+.product-right {
+    display: flex;
+    align-items: center;
+}
+.products .bc-img .box-bottom{
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+
+}
+
+/* .shaped-btn {
+    background-color: transparent;
+    border-color: ;
+    color: white;
+    padding: 10px;
+    border-radius: 30rem;
+    border: none;
+    cursor: pointer;
+    
+} */
+
+.shaped-btn{
+    background-color: transparent;
+    border: none;
+}
+
+.shaped-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 6.5rem;
+    height: 6.5rem;
+    border: 0.2rem solid var(--main-color);
+    
+}
+
+.shaped-btn a i   {
+    font-size: 1.6rem;
+    color: var(--main-color);
+    opacity: 1;
+    box-shadow: none;
+
+}
+.shaped-btn a:hover,
+.shaped-btn a:focus,
+.shaped-btn a:active {
+    background-color: white !important;
+    box-shadow: none;
+}
+
+
+.about .box-container{
+ display: flex;
+ justify-content: space-between;   
+}
+
+.about-left,.about-right {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.about .about-left img {
+
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
 }
