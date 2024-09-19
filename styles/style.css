@@ -26,6 +26,19 @@ html{
     scroll-padding-top:9rem ;
     scroll-behavior: smooth;
 }
+
+html::-webkit-scrollbar{
+    width: 0.8rem;
+    background-color: #fcfcfc;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    border-radius: 3rem;
+    background-color: var(--main-color);
+}
 body {
     background-color: var(--main-color);
     height: 200vh;
@@ -309,17 +322,80 @@ section{
 
 .about .box-container{
  display: flex;
- justify-content: space-between;   
+flex-wrap: wrap;
+column-gap: 2rem;
+
 }
 
 .about-left,.about-right {
-    display: flex;
-    justify-content: flex-start;
+    flex: 1 1 45rem;
 }
 
 .about .about-left img {
 
     width: 100%;
-    max-width: 500px;
     border-radius: 10px;
+}
+
+.box-button .btn:hover {
+    opacity: 0.85;
+}
+
+.about .about-right h3 {
+    font-size: 3rem;
+    color: #fff;
+
+}
+
+.about .about-right p {
+    font-size: 1.6rem;
+    color:#ccc;
+    padding:  1rem 0;
+    line-height: 1.8rem;
+}
+.about .about-right,
+.about .about-left {
+    flex: 1 1 45rem;
+}
+
+.review .box-contaier {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+}
+.review .box-contaier .box {
+    border: var(--border);
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 3rem;
+    text-align: center;
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: space-between; */
+    padding:  3rem 2rem;
+}
+
+.review .box .avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 8rem;
+    height: 8rem;
+
+}
+
+.review .box p {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    padding: 2rem 0;
+}
+
+.review .box h3 {
+    color: var(--main-color);
+    font-size: 1.8rem;
+    padding: 0.8rem;
+}
+
+.review .box i{
+
+color: gold;
 }
