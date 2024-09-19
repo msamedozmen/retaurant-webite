@@ -399,3 +399,76 @@ column-gap: 2rem;
 
 color: gold;
 }
+
+
+/* .contact .box-container {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+}
+
+
+
+.contact .map,
+.contact .get-in-touch {
+    display: flex;
+    flex: 1 1 45rem;
+}
+
+.contact .get-in-touch {
+    background-color: var(--black-color);
+    height: 40rem;
+    border-radius: 25rem;
+
+} */
+
+.contact .row {
+    display: flex;
+    background-color: var(--black-color);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contact .map {
+    flex:1 1 45rem;
+    object-fit: cover;
+    width: 100%;
+}
+.contact form {
+    flex: 1 1 45rem;
+    text-align: center;
+    padding: 5rem 2rem;
+    
+}
+
+.contact h3 {
+    text-transform: uppercase;
+    color:#fff;
+    font-size: 3rem;
+}
+.contact .inputBox {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    border:var(--border)
+}
+
+.contact .btn {
+    background-color: #fff;
+    color: var(--border);
+}
+
+.contact form i {
+    color:#fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.contact .inputBox input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    text-transform: none;
+    color: #fff;
+    background-color: transparent;
+}
