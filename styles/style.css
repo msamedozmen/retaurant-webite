@@ -15,7 +15,16 @@
     border:none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: 0.2s ease;
+    transition: 0.3s ease;
+
+}
+
+.search-input {
+    font-size: 1.6rem;
+    color: var(--black-color);
+    padding: 1rem;
+    text-transform: none;
+    border-radius: 3rem;
 }
 
 /*!base html codes*/
@@ -77,6 +86,37 @@ section{
 }
 
 /*!Header start*/
+.header .search-form {
+    position: absolute;
+    top: 115%;
+    right:7%;
+    background-color: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+border-radius: 3rem;
+box-shadow: 0px  0px 25px 2px rgb(0 0 0 / 75%);
+transform: scaleY(0);
+
+
+
+}
+.header .search-form.active {
+    transform: scaleY(1);
+}
+
+.header .search-form i {
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--black-color);
+    
+}
+
+.header .search-form input {
+    width: 100%;
+}
 
 .logo img {
     height: 10rem;
@@ -115,6 +155,9 @@ section{
     font-size: 2.5rem;
     margin-left:2rem;
     background-color: transparent;
+}
+#menu-btn {
+    display: none;
 }
 
 .header .buttons button:hover{
@@ -358,12 +401,12 @@ column-gap: 2rem;
     flex: 1 1 45rem;
 }
 
-.review .box-contaier {
+.review .box-container{
     display: grid;
     gap: 3rem;
     grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
 }
-.review .box-contaier .box {
+.review .box-container .box {
     border: var(--border);
     padding: 3rem;
     background-color: #fff;
@@ -471,4 +514,184 @@ color: gold;
     text-transform: none;
     color: #fff;
     background-color: transparent;
+}
+
+/* .blogs .box {
+    display: grid;
+    justify-content: space-between;
+    align-items:flex-start;
+} */
+
+.blogs .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 1.5rem;
+
+}
+
+.blogs .box {
+    background-color: #fff;
+    border-radius: 3rem;
+
+}
+
+.blogs .images {
+    width: 100%;
+    height: 25rem;
+    overflow: hidden;
+    border-top-left-radius: 3rem;
+
+}
+
+
+.blogs .images img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+
+}
+
+.blogs .box:hover .images img {
+    transform: scale(1.4);
+}
+
+.blogs .blogs-bottom{
+
+    padding: 2rem;
+}
+.blogs .blogs-bottom h3,
+.blogs .blogs-bottom .title
+{
+    font-size: 2.3rem;
+    padding-top: 1rem;
+    display: block;
+    color: #292828;
+
+}
+
+.blogs .blogs-bottom span {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #ccc;
+    padding: 1rem 0;
+}
+.footer{
+    background-color: var(--black-color);
+    text-align: center;
+    padding: 5rem;
+
+}
+.footer .search {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.footer .search-input{
+    width: 30rem;
+    border-radius: 25rem;
+
+}
+.footer .btn-primary {
+    background-color: var(--main-color);
+    padding:1rem,2rem;
+    margin-left: 1rem;
+}
+
+.footer .share {
+    padding: 2rem 0;
+
+}
+
+.footer .share a {
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    color:#fff;
+    font-size: 2rem;
+    border:var(--border); 
+    border-radius: 50%;
+    margin: 3px;
+}
+
+.footer .share a:hover {
+    background-color: var(--main-color);
+}
+
+.footer .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+}
+
+.footer .links a{
+    background-color: var(--main-color);
+    padding:7px 2rem;
+    color: #fff;
+    font-size: 2rem;
+    border: var(--border);
+
+
+}
+
+.footer .links a:hover{
+background-color: var(--black-color);
+opacity: 0.8;
+
+
+}
+
+.credit {
+    font-size: 2rem;
+    padding:2rem 0;
+    color:#fff
+}
+
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding:1.5rem 2rem;
+    }
+    .header .logo img {
+        height: 7rem;
+    }
+    section {
+        padding: 2rem;
+    }
+    .products .box-container .box .box-head .name {
+
+        font-size: 3.4rem;
+    }
+}
+
+@media (max-width:768px) {
+    #menu-btn {
+        display:inline-block;
+    }
+
+    .header .navbar {
+        position: absolute;
+        background-color: #fff;
+        top:98%;
+        height: calc(100vh - 9rem);
+        width: 30rem;
+        box-shadow: 0px 20px 14px 0px rgb(0 0 0 / 75%);
+        right: -100%;
+    }
+    .header a {
+        color: var(--black-color);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+    .header .navbar.active {
+        right: 3rem;
+    }
+
 }
